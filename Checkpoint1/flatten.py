@@ -1,4 +1,8 @@
 def flatten(list_a, max_depth):
+    """First exercise method
+
+       Implement a function that will flatten two lists up to a maximum given depth.
+    """
     for x in list_a:
          if isinstance(x,list):
              if (max_depth > 0):
@@ -14,11 +18,6 @@ def flatten(list_a, max_depth):
 mylst = [[1], 2, [[3, 4], 5], [[[]]], [[[6]]], 7, 8, [], [[[[9, [10, 11]]]]]]
 level = 2
 
-print "Original list is: "
-print mylst
-
-print "Flatten level is: "
-print level
-
-print "Flattend list is: "
-print list(flatten(mylst, level))
+print "Original list is: ", mylst
+print "Flatten level is: ", level
+print "Flattend list is: ", list(flatten(mylst, level))

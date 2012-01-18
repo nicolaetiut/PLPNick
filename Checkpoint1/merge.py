@@ -1,4 +1,10 @@
 def merge(a, b):
+    """Second exercise method
+
+       Merge 2 objects with any depth (including contained dictionaries,
+       lists, sets, strings, integers,floats). Type mismatches should 
+       yield a tuple with the two elements.
+    """
     result = {}
     for property, value in a.iteritems():
             if type(value) is type(b[property]):
