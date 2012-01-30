@@ -1,0 +1,17 @@
+bb 3
+ac 2
+
+bb 1
+ab 2
+
+bb 3
+ab 2
+
+bb 3
+ab 1
+
+bb 1
+aa 2
+
+aa 1
+bb 1
