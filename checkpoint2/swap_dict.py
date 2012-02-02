@@ -1,3 +1,7 @@
+"""Given a dictionary, swap keys <-> values. The program should
+use some custom logic to check if the swap is possible, but without
+using try..except constructs or the __hash__() function.
+"""
 import collections
 
 

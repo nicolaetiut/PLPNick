@@ -1,10 +1,16 @@
+"""Write a function decorator that tracks how long the
+execution of the wrapped function took. The decorator
+will log slow function calls including details about
+the execution time and function name. The decorator
+should take an optional threshold argument.
+"""
 import datetime
 import time
 
 now = datetime.datetime.now()
 
 
-def time_slow(threshold = None):
+def time_slow(threshold=None):
     def my_decorator(aFunction):
         def wrapped(*args, **kwargs):
             millis1 = int(round(time.time() * 1000))
@@ -12,13 +18,17 @@ def time_slow(threshold = None):
             millis2 = int(round(time.time() * 1000))
             total_time = millis2 - millis1
             if (total_time > threshold):
-                print "The function call to '" + aFunction.__name__ + "' lasted " + str(total_time) + " milliseconds."
-                print "Logging slow function called at " + now.strftime("%Y-%m-%d %H:%M") + "."
+                print "The function call to '" +
+                aFunction.__name__ +
+                "' lasted " + str(total_time) + " milliseconds."
+                print "Logging slow function called at " +
+                now.strftime("%Y-%m-%d %H:%M") + "."
             return res
         return wrapped
     return my_decorator
 
-@time_slow(threshold = 10)
+
+@time_slow(threshold=10)
 def aFunction():
     for x in range(1, 1000000):
         y = x * x
