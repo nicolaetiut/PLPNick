@@ -1,0 +1,66 @@
+CHECKPOINT1
+
+P1. Implement a function that will flatten two lists up to a maximum given depth:
+
+def flatten(list_a, max_depth)
+
+P2. Merge 2 objects with any depth (including contained dictionaries, lists, sets, strings, integers,
+floats). Type mismatches should yield a tuple with the two elements. Examples:
+
+a = {'x': [1,2,3], 'y': 1, 'z': set([1,2,3]), 'w': 'qweqwe', 't': {'a': [1, 2]}, 'm': [1]}
+
+b = {'x': [4,5,6], 'y': 4, 'z': set([4,2,3]), 'w': 'asdf', 't': {'a': [3, 2]}, 'm': "wer"}
+
+Expected result:
+
+{'x': [1,2,3,4,5,6], 'y': 5, 'z': set([1,2,3,4]), 'w': 'qweqweasdf', 't': {'a': [1, 2, 3,
+2]}, 'm': ([1], "wer")}
+
+P3. Given a file containing a list of dictionaries implement a sorting algorithm (of your choosing)
+that will sort the list based on the dictionary keys. The dictionary keys will contain alphabetic
+characters while the values will be integers. The rule for comparing dictionaries between them is:
+• if the value of the dictionary with the lowest alphabetic key is lower than the value of the
+other dictionary with the lowest alphabetic key, then the first dictionary is smaller than the
+second.
+• if the two values specified in the previous rule are equal reapply the algorithm ignoring the
+current key.
+
+The input is a file containing the list of dictionaries. Each dictionary key value is specified on
+the same line in the form <key> <whitespace> <value>. Each list item is split by an empty row. The
+output is a file containing a list of integers specifying the dictionary list in sorted order. Each integer
+identifies a dictionary in the order they were received in the input file.
+
+CHECKPOINT2
+
+P1. Given a dictionary, swap keys <-> values. The program should use some custom logic to
+check if the swap is possible, but without using try..except constructs or the __hash__() function.
+Example:
+
+Input: {'a': 123, 'b': 456}
+
+Output: {123: 'a', 456: 'b'}
+
+------------------------------------------------
+
+Input: {'a': (1, 2, [3])}
+
+Output: Swap is not possible
+
+P2. Create an automated card dealer for a Texas Hold’em application. It should be able to
+handle Deck objects, consisting of Cards. Cards can be added or removed from Decks, and Decks can
+be shuffled and sorted. When dealing cards, each Player receives a Hand consisting of 2 Cards. After
+all cards are dealt, the Dealer should draw the table Hand of 5 Cards"
+
+P3. Write a function decorator that tracks how long the execution of the wrapped function took.
+The decorator will log slow function calls including details about the execution time and function
+name. The decorator should take an optional threshold argument.
+
+Examples:
+
+@time_slow
+def myfast():
+pass
+
+@time_slow(threshold=0.05)
+def myfast():
+pass
