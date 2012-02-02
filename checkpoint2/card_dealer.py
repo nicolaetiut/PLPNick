@@ -1,4 +1,4 @@
-"""Create an automated card dealer for a Texas Hold’em application.
+"""Create an automated card dealer for a Texas Holdem application.
 It should be able to handle Deck objects, consisting of Cards.
 Cards can be added or removed from Decks, and Decks can be shuffled
 and sorted. When dealing cards, each Player receives a Hand
